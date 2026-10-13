@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conference Registration Form</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; max-width: 600px; }
+    h1 { color: #1f3a5f; }
+    label { display: block; margin-top: 12px; font-weight: bold; }
+    input[type="text"], input[type="email"], input[type="number"], select, textarea { padding: 6px; }
+    input[type="text"], input[type="email"] { width: 250px; }
+    textarea { width: 100%; }
+    .option { font-weight: normal; display: block; margin-top: 4px; }
+    .buttons { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Conference Registration Form</h1>
+
+  <form action="#" method="post">
+
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="18" max="99" value="18" required>
+
+    <label>Gender:</label>
+    <label class="option"><input type="radio" name="gender" value="male"> Male</label>
+    <label class="option"><input type="radio" name="gender" value="female"> Female</label>
+
+    <label for="country">Country of Residence:</label>
+    <select id="country" name="country">
+      <option value="Malaysia" selected>Malaysia</option>
+      <option value="Singapore">Singapore</option>
+      <option value="Indonesia">Indonesia</option>
+      <option value="Thailand">Thailand</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label>Areas of Interest:</label>
+    <label class="option"><input type="checkbox" name="interest" value="software"> Software Development</label>
+    <label class="option"><input type="checkbox" name="interest" value="data"> Data Science</label>
+    <label class="option"><input type="checkbox" name="interest" value="cyber"> Cybersecurity</label>
+    <label class="option"><input type="checkbox" name="interest" value="ai"> Artificial Intelligence</label>
+
+    <label>Experience Level:</label>
+    <label class="option"><input type="radio" name="level" value="beginner"> Beginner</label>
+    <label class="option"><input type="radio" name="level" value="intermediate"> Intermediate</label>
+    <label class="option"><input type="radio" name="level" value="advanced"> Advanced</label>
+
+    <label for="comments">Comments or Questions:</label>
+    <textarea id="comments" name="comments" rows="4" placeholder="Any comments or questions?"></textarea>
+
+    <div class="buttons">
+      <button type="submit">Register</button>
+      <button type="reset">Reset</button>
+    </div>
+  </form>
+</body>
+</html>
